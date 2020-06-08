@@ -10,7 +10,7 @@
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="40,46,0,0" Text="Detailed Estimate" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="34" FontWeight="Light" FontFamily="Segoe UI Light" Height="55" Width="365" FocusVisualPrimaryBrush="Black" Foreground="Black"/>
         <TextBlock HorizontalAlignment="Right" Margin="0,46,40,0" Text="Rs. 0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontWeight="SemiLight" FontFamily="Segoe UI Light" Height="55" Width="337" FocusVisualPrimaryBrush="Black" Foreground="Black" TextAlignment="Right" Tag="Cost"/>
-        <Grid Margin="40,110,40,40" Tag=""/>
+        <Grid Margin="40,110,40,40" Tag="Content-Grid"/>
 
     </Grid>
 </Page>

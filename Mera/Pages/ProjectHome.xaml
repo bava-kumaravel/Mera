@@ -8,7 +8,8 @@
     mc:Ignorable="d">
 
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="40,46,0,0" Text="Home" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="34" FontWeight="Light" FontFamily="Segoe UI Light" FocusVisualPrimaryBrush="Black" Foreground="Black" />
+        <TextBlock HorizontalAlignment="Left" Margin="40,46,0,0" Text="Home" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="34" FontWeight="Light" FontFamily="Segoe UI Light" FocusVisualPrimaryBrush="Black" Foreground="Black" Tag="Header"/>
+        <TextBlock x:Name="projectStatus" HorizontalAlignment="Left" Height="28" Margin="653,484,0,0" Text="Project Status Placeholder." TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="21" TextAlignment="Center" FocusVisualPrimaryBrush="Black" Foreground="Black" Tag="ProjectStatus"/>
 
     </Grid>
 </Page>

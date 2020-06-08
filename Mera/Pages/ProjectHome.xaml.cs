@@ -25,11 +25,25 @@ namespace Mera.Pages
         public ProjectHome()
         {
             this.InitializeComponent();
+            UpdateProjectStatus();
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
         {
 
         }
+
+        private void UpdateProjectStatus()
+        {
+            if (ProjectDetails.projectSet)
+            {
+                projectStatus.Text = "Project initialized.";
+            }
+            else
+            {
+                projectStatus.Text = "Project not initialized.";
+            }
+        }
+
     }
 }

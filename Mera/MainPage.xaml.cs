@@ -27,12 +27,6 @@ namespace Mera
             this.InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private double NavViewCompactModeThresholdWidth { get { return NavView.CompactModeThresholdWidth; } }
 
         private void ContentFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
         {
