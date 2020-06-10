@@ -9,7 +9,38 @@
 
     <Grid>
         <TextBlock HorizontalAlignment="Left" Margin="40,46,0,0" Text="Home" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="34" FontWeight="Light" FontFamily="Segoe UI Light" FocusVisualPrimaryBrush="Black" Foreground="Black" Tag="Header"/>
-        <TextBlock x:Name="projectStatus" HorizontalAlignment="Left" Height="28" Margin="653,484,0,0" Text="Project Status Placeholder." TextWrapping="Wrap" VerticalAlignment="Top" Width="206" FontSize="21" TextAlignment="Center" FocusVisualPrimaryBrush="Black" Foreground="Black" Tag="ProjectStatus"/>
-
+        <Grid x:Name="ProjectGrid" Margin="30,100,30,30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="160"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="addProjButton" Grid.Row="0" Grid.Column="0" Content="+ Add Project"  Margin="10"
+                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" FontSize="20"
+                    FontWeight="Light" Click="AddProject" PointerEntered="HoverEvent"
+                    Background="#CC5F5F5F" Foreground="#FFD4D4D4">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <ResourceDictionary.ThemeDictionaries>
+                            <ResourceDictionary x:Key="Dark">
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="DarkGray"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPointerClick" Color="Red"/>
+                            </ResourceDictionary>
+                            <ResourceDictionary x:Key="Light">
+                                <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                                <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="DarkGray"/>
+                                <SolidColorBrush x:Key="ButtonForegroundPointerClick" Color="Red"/>
+                            </ResourceDictionary>
+                        </ResourceDictionary.ThemeDictionaries>
+                    </ResourceDictionary>
+                </Button.Resources>
+            </Button>
+        </Grid>
+        <TextBlock x:Name="ProjectCount" HorizontalAlignment="Right" Margin="0,46,40,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="24" FontWeight="SemiLight" FontFamily="Segoe UI Light" Height="55" Width="337" FocusVisualPrimaryBrush="Black" Foreground="Black" TextAlignment="Right" Tag="Cost"/>
     </Grid>
 </Page>

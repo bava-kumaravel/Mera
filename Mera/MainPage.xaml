@@ -12,16 +12,26 @@
     </Page.Foreground>
 
     <Grid>
+        <Grid.Resources>
+            <AcrylicBrush x:Key="NavigationViewDefaultPaneBackground"
+                  BackgroundSource="Backdrop"
+                  TintColor="Gray"
+                  TintOpacity="0.1"
+                  FallbackColor="Gray"/>
+        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="19*"/>
             <RowDefinition Height="481*"/>
         </Grid.RowDefinitions>
         <NavigationView x:Name="NavView" 
+                        Background="{StaticResource CustomAcrylicDark}"
+                        PaneDisplayMode="LeftCompact"
                         Loaded="NavView_Loaded" 
                         ItemInvoked="NavView_ItemInvoked"
                         BackRequested="NavView_BackRequested"
                         IsPaneOpen="False" Grid.RowSpan="2"
                         >
+            
             <NavigationView.MenuItems>
                 <NavigationViewItem x:Uid="HomeNavItem" Icon="Home" Content="Home" Tag="home"/>
                 <NavigationViewItem x:Uid="RoughEstimateNavItem" Icon="Edit" Content="Rough Estimate" Tag="roughest"/>

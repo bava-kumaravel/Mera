@@ -25,7 +25,7 @@ namespace Mera.Pages
         public ProjectHome()
         {
             this.InitializeComponent();
-            UpdateProjectStatus();
+            UpdateProjectCount();
         }
 
         private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
@@ -33,17 +33,36 @@ namespace Mera.Pages
 
         }
 
-        private void UpdateProjectStatus()
+        private void UpdateProjectGrid()
         {
-            if (ProjectDetails.projectSet)
-            {
-                projectStatus.Text = "Project initialized.";
-            }
-            else
-            {
-                projectStatus.Text = "Project not initialized.";
-            }
+            
+        }
+        
+        private void HoverEvent(object sender, RoutedEventArgs e)
+        {
+            Button button = (Button)sender;
+            button.Background = new SolidColorBrush(Windows.UI.Colors.Blue);
         }
 
+        private void UpdateProjectCount()
+        {
+            ProjectCount.Text = ProjectDetails.projectsList.Count.ToString();
+        }
+
+        private void AddProject(object sender, RoutedEventArgs e)
+        {
+            
+            //Get number of projects
+            int numOfProjects = ProjectDetails.numOfProjects;
+
+            //Create new project
+            Classes.Project newProj = new Classes.Project("Rice Store",numOfProjects);
+
+            //Add project to the projects list
+            ProjectDetails.projectsList.Add(newProj);
+
+            //Call Grid Update
+            UpdateProjectCount();
+        }
     }
 }
